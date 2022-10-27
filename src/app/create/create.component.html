@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="text-center text-primary">Students Information</h2><br>
+    <form [formGroup]="studentForm">
+        <div class="row mb-3">
+            <label for="fname" class="col-sm-2 col-form-label">Student Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputFName" formControlName="name" placeholder="Write Full Name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="lname" class="col-sm-2 col-form-label">Email Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputLName" formControlName="email" placeholder="xyz@xyz.com">
+            </div>
+        </div>
+    </form>
+    <button class="btn btn-primary" *ngIf="!id" (click)="postData()">Submit</button>
+    <button class="btn btn-primary" *ngIf="id"  (click)="putData()">Update</button>
+
+</div>
